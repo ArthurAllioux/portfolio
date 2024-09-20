@@ -1,4 +1,81 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-  
+
+@layer base {
+  :root {
+    --foreground-rgb: 11, 10, 9;
+    --background-rgb: 248, 245, 242;
+    --primary-rgb: 36, 24, 16;
+    --secondary-rgb: 204, 162, 119;
+    --accent-rgb: 155, 180, 139;
+  }
+
+  body {
+    background-color: rgb(var(--background-rgb));
+    color: rgb(var(--primary-rgb));
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-headings);
+  }
+
+  html > * {
+    font-family: var(--font-standard);
+  }
+}
+
+/* :root * {
+  @apply outline outline-2 outline-gray-950;
+} */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.bg-clip-text {
+  padding-left: 0.1em;
+  margin-left: -0.1em;
+  padding-right: 0.1em;
+  margin-right: -0.1em;
+  padding-top: 0.1em;
+  margin-top: -0.1em;
+  padding-bottom: 0.1em;
+  margin-bottom: -0.1em;
+  background-color: var(--color-foreground);
+}
+
+.overflow-top:before,
+.overflow-top:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 9999px;
+  box-shadow:
+    0px 10px 0px 0px rgba(var(--secondary-rgb)),
+    0 0 0 100vmax rgb(var(--background-rgb));
+  animation: blob 8s ease infinite;
+  pointer-events: none;
+}
+
+.overflow-top:before {
+  clip-path: inset(-100vmax -100vmax 50% -100vmax); /* === haut de la div */
+  z-index: -1;
+}
+
+.overflow-top:after {
+  clip-path: inset(50% -100vmax -100vmax -100vmax); /* === bas de la div*/
+  z-index: 1;
+}
