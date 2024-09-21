@@ -32,16 +32,18 @@ export default function MePhoto(props: MePhotoProps) {
   }
 
   return (
-    <div className={cn("relative overflow-hidden p-8", props.className)}>
-      <div
-        onClick={startSayHi}
-        className="overflow-top relative z-0 size-56 cursor-pointer bg-gradient-to-t from-secondary to-primary transition-all md:size-80"
-      >
-        <Image
-          src={me}
-          alt="me"
-          className="absolute bottom-0 size-72 object-cover contrast-150 transition-all hover:scale-105 md:size-96"
-        />
+    <div className={cn("relative lg:-m-8", props.className)}>
+      <div className="overflow-hidden p-8">
+        <div
+          onClick={startSayHi}
+          className="overflow-top relative z-0 size-56 cursor-pointer bg-gradient-to-t from-secondary to-primary transition-all md:size-80"
+        >
+          <Image
+            src={me}
+            alt="me"
+            className="absolute bottom-0 size-72 object-cover contrast-150 transition-all hover:scale-105 md:size-96"
+          />
+        </div>
       </div>
       <div
         className={cn(
