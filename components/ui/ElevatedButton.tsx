@@ -5,6 +5,7 @@ interface ElevatedButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {}
 export default function ElevatedButton(props: ElevatedButtonProps) {
   return (
     <button
+      {...props}
       className={cn(
         "shadow-primary outline-primary transition-all hover:-translate-y-1 hover:shadow-elevate hover:outline hover:outline-2",
         props.className,

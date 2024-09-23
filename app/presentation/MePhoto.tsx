@@ -41,7 +41,7 @@ export default function MePhoto(props: MePhotoProps) {
           <Image
             src={me}
             alt="me"
-            className="absolute bottom-0 size-72 object-cover contrast-150 transition-all hover:scale-105 md:size-96"
+            className="pointer-events-none absolute bottom-0 size-72 object-cover contrast-150 transition-all hover:scale-105 md:size-96"
           />
         </div>
       </div>
@@ -58,8 +58,13 @@ export default function MePhoto(props: MePhotoProps) {
           animate={sayHi ? "wave" : "hidden"}
           className="inline-block size-16 md:size-24"
           onAnimationComplete={endSayHi}
+          drag
         >
-          <Image src={wavingHand} alt="Salut!" />
+          <Image
+            src={wavingHand}
+            alt="Salut!"
+            className="pointer-events-none"
+          />
         </motion.span>
       </div>
     </div>

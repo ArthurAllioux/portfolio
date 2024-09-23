@@ -23,7 +23,7 @@ export default function Skills() {
   }, [])
   return (
     <div className="flex flex-col items-start gap-4">
-      <h2 className="w-fit text-xl font-semibold underline decoration-2 underline-offset-4">
+      <h2 className="text-xl font-semibold underline decoration-2 underline-offset-4">
         Ma stack
       </h2>
       <div className="flex flex-col items-start">

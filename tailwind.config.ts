@@ -19,6 +19,10 @@ const config = {
         elevate: "0 4px 0 2px var(--tw-shadow-color)",
         "big-inner": "inset 0px 0px 15px var(--tw-shadow-color)",
       },
+      fontFamily: {
+        headings: ["var(--font-headings)"],
+        p: ["var(--font-p)"],
+      },
       colors: {
         primary: {
           DEFAULT: "rgb(var(--primary-rgb))",

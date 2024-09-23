@@ -14,7 +14,7 @@ const headingsFont = Overpass({
 })
 const textFont = Inter({
   subsets: ["latin"],
-  variable: "--font-standard",
+  variable: "--font-p",
 })
 
 export default function RootLayout({
