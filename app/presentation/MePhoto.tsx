@@ -41,7 +41,7 @@ export default function MePhoto(props: MePhotoProps) {
           <Image
             src={me}
             alt="me"
-            className="pointer-events-none absolute bottom-0 size-72 object-cover contrast-150 transition-all hover:scale-105 md:size-96"
+            className="absolute bottom-0 size-72 object-cover contrast-150 transition-all hover:scale-105 md:size-96"
           />
         </div>
       </div>

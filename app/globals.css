@@ -4,11 +4,11 @@
 
 @layer base {
   :root {
-    --foreground-rgb: 11, 10, 9;
-    --background-rgb: 248, 235, 222;
-    --primary-rgb: 50, 24, 16;
-    --secondary-rgb: 204, 162, 119;
-    --accent-rgb: 155, 180, 139;
+    --foreground-rgb: 11 10 9;
+    --background-rgb: 248 235 222;
+    --primary-rgb: 40 24 16;
+    --secondary-rgb: 204 162 119;
+    --accent-rgb: 155 180 139;
   }
 
   body {

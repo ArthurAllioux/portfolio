@@ -27,6 +27,8 @@ export default function Links() {
         {socials.map((social, i) => {
           return (
             <Link
+              target="_blank"
+              rel="noopener noreferrer"
               key={i}
               href={social.href}
               className="transition hover:-translate-y-1 hover:scale-105"

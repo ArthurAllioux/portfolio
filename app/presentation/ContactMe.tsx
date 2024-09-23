@@ -30,7 +30,7 @@ export function ContactMe() {
         <Image
           src={bgWaves}
           alt=""
-          className="pointer-events-none absolute bottom-0 right-0 -z-50"
+          className="pointer-events-none absolute left-0 top-0 -z-50"
         />
         <DialogHeader className="">
           <DialogTitle className="text-4xl font-black text-primary">
