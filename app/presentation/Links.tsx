@@ -1,7 +1,6 @@
-import ElevatedButton from "@/components/ui/ElevatedButton"
-import { cn } from "@/lib/utils"
 import Image from "next/image"
 import Link from "next/link"
+import { ContactMe } from "./ContactMe"
 
 interface Social {
   href: string
@@ -9,7 +8,7 @@ interface Social {
   iconLink: string
 }
 
-export default function SocialLinks() {
+export default function Links() {
   const socials: Social[] = [
     {
       title: "Linkedin",
@@ -45,14 +44,7 @@ export default function SocialLinks() {
         })}
       </div>
 
-      <ElevatedButton
-        className={cn(
-          "rounded-md bg-secondary px-6 font-semibold",
-          "bg-[linear-gradient(110deg,rgb(var(--secondary-rgb)),45%,rgb(var(--background-rgb)),55%,rgb(var(--secondary-rgb)))] bg-[length:300%_100%] hover:animate-shimmer",
-        )}
-      >
-        Me contacter
-      </ElevatedButton>
+      <ContactMe />
     </div>
   )
 }
