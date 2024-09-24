@@ -11,7 +11,8 @@ import { cn } from "@/lib/utils"
 import { ArrowRight, Linkedin, MailCheck, PhoneCall } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import bgWaves from "@/assets/bg-waves.svg"
+import bgWavesTop from "@/assets/bg-waves-top.svg"
+import bgWavesBottom from "@/assets/bg-waves-bottom.svg"
 export function ContactMe() {
   return (
     <Dialog>
@@ -28,9 +29,14 @@ export function ContactMe() {
 
       <DialogContent className="overflow-hidden bg-background p-8">
         <Image
-          src={bgWaves}
+          src={bgWavesTop}
           alt=""
           className="pointer-events-none absolute left-0 top-0 -z-50"
+        />
+        <Image
+          src={bgWavesBottom}
+          alt=""
+          className="pointer-events-none absolute bottom-0 left-0 -z-50"
         />
         <DialogHeader className="">
           <DialogTitle className="text-4xl font-black text-primary">
