@@ -16,7 +16,10 @@ const config = {
         tight: "5vw",
       },
       boxShadow: {
+        "elevate-center": "0 4px 0 2px var(--tw-shadow-color)",
         elevate: "0 4px 0 2px var(--tw-shadow-color)",
+        "elevate-left": "-2px 4px 0 0px var(--tw-shadow-color)",
+        "elevate-right": "2px 4px 0 0px var(--tw-shadow-color)",
         "big-inner": "inset 0px 0px 15px var(--tw-shadow-color)",
       },
       fontFamily: {
