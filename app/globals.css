@@ -28,6 +28,13 @@
   html > * {
     font-family: var(--font-p);
   }
+  html {
+    scroll-snap-type: y proximity;
+  }
+  section {
+    height: 100vh;
+    scroll-snap-align: center;
+  }
 }
 
 /* :root * {

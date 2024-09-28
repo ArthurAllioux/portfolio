@@ -24,7 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={cn(headingsFont.variable, textFont.variable)}>
+      <body
+        className={cn(headingsFont.variable, textFont.variable, "antialiased")}
+      >
         {children}
       </body>
     </html>

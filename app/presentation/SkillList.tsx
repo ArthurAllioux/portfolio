@@ -40,7 +40,7 @@ export default function SkillList({
               />
               <p
                 className={cn(
-                  "pointer-events-none absolute -bottom-2 text-sm font-medium capitalize italic opacity-0 transition-all group-hover:opacity-100 lg:text-base",
+                  "absolute -bottom-2 select-none text-sm font-medium capitalize italic opacity-0 transition-all group-hover:opacity-100 lg:text-base",
                   hoverClassText,
                 )}
               >

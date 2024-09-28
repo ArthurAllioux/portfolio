@@ -3,9 +3,9 @@ import Skills from "./Skills"
 
 export default function PresentationContainer() {
   return (
-    <div className="flex min-h-screen flex-col justify-center gap-12 p-tight lg:gap-32">
+    <section className="flex snap-center snap-normal flex-col justify-center gap-12 p-tight lg:gap-32">
       <Me />
       <Skills />
-    </div>
+    </section>
   )
 }

@@ -34,7 +34,6 @@ export default function Links() {
               className="transition hover:-translate-y-1 hover:scale-105"
               title={social.title}
             >
-              {/*eslint-disable-next-line @next/next/no-img-element*/}
               <Image
                 src={social.iconLink}
                 alt={social.title}
