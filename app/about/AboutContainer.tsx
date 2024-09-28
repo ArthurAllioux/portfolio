@@ -2,10 +2,11 @@ import Image from "next/image"
 import bureau from "@/assets/bureau.webp"
 import { FollowerPointerCard } from "@/components/ui/following-pointer"
 import CustomCursorForImageLabel from "../../components/ui/custom-cursors"
+import { Cog } from "lucide-react"
 
 export default function AboutContainer() {
   return (
-    <div className="flex min-h-screen flex-col items-center p-tight lg:items-end">
+    <section className="flex snap-center snap-normal flex-col items-center justify-center p-tight lg:items-end">
       <div className="relative flex flex-col items-center gap-8 lg:flex-row">
         <FollowerPointerCard
           customCursor={
@@ -20,40 +21,54 @@ export default function AboutContainer() {
           />
         </FollowerPointerCard>
         <div className="flex max-w-prose flex-col justify-center gap-4 text-pretty text-sm leading-relaxed tracking-wide xl:text-base">
-          <h3 className="text-xl font-semibold">
-            Salut à toi, nouvel arrivant ! Bienvenue sur mon portfolio.{" "}
-          </h3>
+          <div className="font-semibold tracking-tight">
+            <h2 className="text-secondary">À propos de moi</h2>
+            <h3 className="text-xl">Bienvenue sur mon portfolio ! </h3>
+          </div>
           <p>
             Comme tu l&apos;auras compris, je m&apos;appelle Arthur, j&apos;ai
-            25 ans et je suis développeur. Je suis tombé dans l&apos;univers du
-            développement un peu par hasard à l&apos;EPF, une école
-            d&apos;ingénieurs. C&apos;est en développant un petit jeu de société
-            en Java que j&apos;ai réalisé que c&apos;était fait pour moi.
-            J&apos;ai tout de suite adoré la créativité sans limite
+            25 ans et <b>je suis développeur.</b> Je suis tombé dans
+            l&apos;univers du développement un peu par hasard à l&apos;EPF, une
+            école d&apos;ingénieurs. C&apos;est en développant un petit jeu de
+            société en Java que j&apos;ai réalisé que c&apos;était fait pour
+            moi. J&apos;ai tout de suite adoré <b>la créativité sans limite </b>
             qu&apos;offre la programmation.
           </p>
           <p>
-            J&apos;avoue que dire &quot;je suis un créatif&quot; me fait
-            toujours un peu hésiter, de peur que ça paraisse prétentieux. Mais
-            il faut être honnête, je prends vraiment plaisir à créer. C&apos;est
-            sûrement pour ça que je me suis autant intéressé au design ces
-            dernières années. D&apos;ailleurs, j&apos;espère que le design de
-            mon portfolio te plaît !
+            J&apos;avoue que dire{" "}
+            <span className="group relative inline-block px-2 font-medium before:absolute before:inset-0 before:-z-10 before:block before:-skew-y-2 before:rounded-md before:bg-gradient-to-r before:from-secondary before:to-secondary hover:before:from-blue-400 hover:before:to-purple-400">
+              <span className="*:duration-500">
+                <Cog className="absolute left-12 -z-50 rotate-45 opacity-0 transition-all group-hover:-translate-x-2 group-hover:-translate-y-4 group-hover:-rotate-180 group-hover:opacity-100" />
+                <Cog className="absolute left-2 -z-50 rotate-45 opacity-0 transition-all group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:-rotate-180 group-hover:opacity-100" />
+                {/* <PocketKnife className="absolute left-16 -z-50 -rotate-12 transition-all group-hover:-translate-y-5 group-hover:opacity-100 opacity-0" /> */}
+                <Cog className="absolute right-2 -z-50 rotate-45 opacity-0 transition-all group-hover:translate-x-2 group-hover:translate-y-2 group-hover:rotate-180 group-hover:opacity-100" />
+              </span>
+              <span>&quot;je suis un créatif&quot;</span>
+            </span>{" "}
+            me fait toujours un peu hésiter, de peur que ça paraisse
+            prétentieux. Mais il faut être honnête, je prends vraiment plaisir à
+            créer. C&apos;est sûrement pour ça que{" "}
+            <b>je me suis intéressé au design ces dernières années. </b>
+            D&apos;ailleurs, j&apos;espère que le design de mon portfolio te
+            plaît !
           </p>
           <p>
-            Pour ce qui est de mon travail, j&apos;aime évoluer dans un cadre
-            calme. Un fauteuil confortable, une bonne playlist apaisante en
-            fond, et je suis dans ma zone. J&apos;aime aussi partager mes
-            connaissances et je suis un blagueur avec mes collègues.
+            Pour ce qui est de mon travail, j&apos;aime évoluer dans
+            <b> un cadre calme et humain.</b> J&apos;apprécie autant les
+            instants de focus individuel que l&apos;énergie du travail
+            collaboratif. Seul, un fauteuil confortable et une playlist
+            apaisante <b>me plonge dans ma zone.</b> En équipe, je suis toujours
+            surpris par la manière dont la dynamique collective fait émerger des
+            idées nouvelles sans effort.
           </p>
           <p>
             En résumé, je suis quelqu&apos;un de plutôt décontracté, créatif et
-            attentif aux émotions. J&apos;aime que mon travail ait du sens.s. Si
-            tu veux en savoir plus sur mon parcours, c&apos;est juste en dessous
-            !
+            attentif aux émotions. J&apos;aime que mon travail ait du sens. Si
+            tu veux en savoir plus sur mon parcours,
+            <b> c&apos;est juste en dessous !</b>
           </p>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
