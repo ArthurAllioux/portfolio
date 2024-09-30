@@ -6,7 +6,7 @@ import { Cog } from "lucide-react"
 
 export default function AboutContainer() {
   return (
-    <section className="flex snap-center snap-normal flex-col items-center justify-center p-tight lg:items-end">
+    <section className="flex flex-col items-center justify-center p-tight lg:items-end">
       <div className="relative flex flex-col items-center gap-8 lg:flex-row">
         <FollowerPointerCard
           customCursor={
