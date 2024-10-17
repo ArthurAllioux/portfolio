@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { ContactMe } from "./ContactMe"
+import { ArrowDown, Minus } from "lucide-react"
 
 interface Social {
   href: string
@@ -44,8 +45,19 @@ export default function Links() {
           )
         })}
       </div>
-
       <ContactMe />
+      <Link
+        target="_blank"
+        rel="noopener noreferrer"
+        href="./CV-ArthurAllioux.pdf"
+        className="group relative flex flex-row items-center gap-1 rounded-lg font-semibold text-primary underline decoration-2 underline-offset-4 transition"
+      >
+        CV
+        <div className="absolute -right-7 -mb-[10px] -translate-x-4 scale-0 transition-all group-hover:translate-x-0 group-hover:scale-100">
+          <ArrowDown className="group-hover:animate-bounce" />
+          <Minus className="-mt-3" />
+        </div>
+      </Link>
     </div>
   )
 }
