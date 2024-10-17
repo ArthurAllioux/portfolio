@@ -27,12 +27,20 @@ export default function Skills() {
         Ma stack
       </h2>
       <div className="flex flex-col items-start">
-        <SkillList
-          skillList={frontEndSkills}
-          title="Front-end"
-          animate={animateActive}
-        />
-        <SkillList skillList={backEndSkills} title="Back-end" animate={false} />
+        <div className="mb-4 flex w-full flex-row items-center gap-x-4">
+          <h3 className="min-w-24 whitespace-nowrap border-r-2 border-primary pr-4 font-semibold">
+            Front-end
+          </h3>
+          <SkillList skillList={frontEndSkills} animate={animateActive} />
+        </div>
+        <div className="flex flex-col items-start">
+          <div className="mb-4 flex w-full flex-row items-center gap-x-4">
+            <h3 className="min-w-24 whitespace-nowrap border-r-2 border-primary pr-4 font-semibold">
+              Back-end
+            </h3>
+            <SkillList skillList={backEndSkills} animate={false} />
+          </div>
+        </div>
       </div>
     </div>
   )
