@@ -36,11 +36,11 @@ export default function AboutContainer() {
           </p>
           <p>
             J&apos;avoue que dire{" "}
-            <span className="group relative inline-block px-2 font-medium before:absolute before:inset-0 before:-z-10 before:block before:-skew-y-2 before:rounded-md before:bg-gradient-to-r before:from-secondary before:to-secondary hover:before:from-blue-400 hover:before:to-purple-400">
+            <span className="group relative inline-block px-2 font-medium before:absolute before:inset-0 before:-z-10 before:block before:-skew-y-2 before:rounded-md before:bg-secondary hover:before:bg-transparent">
+              <span className="absolute inset-0 -z-10 -translate-y-[50%] -skew-y-2 rounded-md bg-gradient-to-r from-blue-400 to-purple-400 opacity-0 transition duration-300 group-hover:translate-y-[0%] group-hover:opacity-100" />
               <span className="*:duration-500">
                 <Cog className="absolute left-12 -z-50 rotate-45 opacity-0 transition-all group-hover:-translate-x-2 group-hover:-translate-y-4 group-hover:-rotate-180 group-hover:opacity-100" />
                 <Cog className="absolute left-2 -z-50 rotate-45 opacity-0 transition-all group-hover:-translate-x-2 group-hover:-translate-y-2 group-hover:-rotate-180 group-hover:opacity-100" />
-                {/* <PocketKnife className="absolute left-16 -z-50 -rotate-12 transition-all group-hover:-translate-y-5 group-hover:opacity-100 opacity-0" /> */}
                 <Cog className="absolute right-2 -z-50 rotate-45 opacity-0 transition-all group-hover:translate-x-2 group-hover:translate-y-2 group-hover:rotate-180 group-hover:opacity-100" />
               </span>
               <span>&quot;je suis un créatif&quot;</span>

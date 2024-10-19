@@ -4,7 +4,14 @@ import { useEffect, useState } from "react"
 
 export default function Skills() {
   const frontEndSkills = ["html", "css", "js", "ts", "react", "next"]
-  const backEndSkills = ["java", "spring", "ts", "nodejs"]
+  const backEndSkills = [
+    "java",
+    "spring",
+    "ts",
+    "nodejs",
+    "postgres",
+    "mongodb",
+  ]
 
   const [animateActive, setanimateActive] = useState(false)
 
@@ -24,7 +31,7 @@ export default function Skills() {
   return (
     <div className="flex flex-col items-start gap-4">
       <h2 className="text-xl font-semibold underline decoration-2 underline-offset-4">
-        Ma stack
+        Tech stack
       </h2>
       <div className="flex flex-col items-start">
         <div className="mb-4 flex w-full flex-row items-center gap-x-4">
