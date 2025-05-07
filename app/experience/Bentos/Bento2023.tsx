@@ -8,7 +8,7 @@ export default function Bento2023() {
       <HeaderBlock
         title="Développeur Full Stack"
         subtitle="Takima"
-        description="En 2023, j’ai rejoint Takima en tant que développeur full stack. J’ai d’abord été formé à Spring puis au dévellopement front-end au travers d'une formation complète. J'ai ensuite rejoins une mission."
+        description="En 2023, j’ai rejoint Takima en tant que développeur full stack. J’ai d’abord été formé à Spring puis au dévelopement front-end au travers d'une formation complète. J'ai ensuite rejoint une mission."
         stack={[
           "java",
           "ts",

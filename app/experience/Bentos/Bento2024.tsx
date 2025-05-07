@@ -19,14 +19,14 @@ export default function Bento2024() {
         <Image src={logoPia} alt="logoPia" className="size-16" />
         <div className="flex flex-col gap-1">
           <p className="text-pretty text-sm leading-relaxed tracking-wide">
-            J&apos;ai dévellopé la landing page de pia.com. Pia est une
+            J&apos;ai développé la landing page de pia.com. Pia est une
             application d&apos;appel payant entre un consultant et son public.
           </p>
           <Link
             target="_blank"
             rel="noopener noreferrer"
             href="https://pia-landing.vercel.app/"
-            className="group relative font-semibold text-[#FF385D] transition hover:translate-x-6"
+            className="group relative w-fit font-semibold text-[#FF385D] transition hover:translate-x-6"
           >
             <ArrowRight className="absolute -left-6 opacity-0 transition-opacity group-hover:opacity-100"></ArrowRight>
             Découvrir
@@ -37,7 +37,7 @@ export default function Bento2024() {
         <Image src={logoCvdm} alt="logoCvdm" className="size-16 scale-125" />
         <div className="flex flex-col gap-1">
           <p className="text-pretty text-sm leading-relaxed tracking-wide">
-            J&apos;ai designé puis dévellopé la landing page de Coloc en Val de
+            J&apos;ai designé puis développé la landing page de Coloc en Val de
             Marne. Coloc en Val de Marne est une association d&apos;accueil
             d&apos;adultes en situation de handicap mental.
           </p>
@@ -45,7 +45,7 @@ export default function Bento2024() {
             target="_blank"
             rel="noopener noreferrer"
             href="https://cdvm-ebon.vercel.app/"
-            className="group relative font-semibold text-[#7a9dd8] transition hover:translate-x-6"
+            className="group relative w-fit font-semibold text-[#7a9dd8] transition hover:translate-x-6"
           >
             <ArrowRight className="absolute -left-6 opacity-0 transition-opacity group-hover:opacity-100"></ArrowRight>
             Découvrir

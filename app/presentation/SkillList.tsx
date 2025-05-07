@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
 import { cn } from "@/lib/utils"
 import { cva } from "class-variance-authority"
 
@@ -8,7 +8,7 @@ export default function SkillList({
   animate,
   variant,
 }: {
-  skillList: string[]
+  skillList: { name: string; image?: StaticImageData }[]
   theme?: "light" | "dark"
   animate?: boolean
   variant?: "small"
@@ -42,7 +42,10 @@ export default function SkillList({
                 style({ image: variant }),
                 hoverClassImage,
               )}
-              src={`https://skillicons.dev/icons?i=${skill}&theme=${theme || "dark"}`}
+              src={
+                skill.image ??
+                `https://skillicons.dev/icons?i=${skill.name}&theme=${theme || "dark"}`
+              }
               alt="skills"
               width={32}
               height={32}
@@ -54,7 +57,7 @@ export default function SkillList({
                 hoverClassText,
               )}
             >
-              {skill}
+              {skill.name}
             </p>
           </li>
         )

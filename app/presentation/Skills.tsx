@@ -3,14 +3,21 @@ import SkillList from "./SkillList"
 import { useEffect, useState } from "react"
 
 export default function Skills() {
-  const frontEndSkills = ["html", "css", "js", "ts", "react", "next"]
+  const frontEndSkills = [
+    { name: "html" },
+    { name: "css" },
+    { name: "js" },
+    { name: "ts" },
+    { name: "react" },
+    { name: "next" },
+  ]
   const backEndSkills = [
-    "java",
-    "spring",
-    "ts",
-    "nodejs",
-    "postgres",
-    "mongodb",
+    { name: "java" },
+    { name: "spring" },
+    { name: "ts" },
+    { name: "nodejs" },
+    { name: "postgres" },
+    { name: "mongodb" },
   ]
 
   const [animateActive, setanimateActive] = useState(false)

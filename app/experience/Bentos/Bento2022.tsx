@@ -83,7 +83,7 @@ export default function Bento2022() {
           <p className="text-pretty text-sm leading-relaxed tracking-wide">
             Côté technique, ma mission principale était de construire une API
             Rest en NodeJs. Cette API avait pour objectif de permettre la
-            distribution de NFT à Webedia et à ses partenaires. Cela m&apos;a
+            distribution de NFT par Webedia et ses partenaires. Cela m&apos;a
             permis de vraiment plonger dans les bases du back-end et de
             renforcer mes compétences sur ce terrain.
           </p>
