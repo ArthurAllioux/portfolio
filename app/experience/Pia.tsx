@@ -4,12 +4,11 @@ import Link from "next/link"
 import logoPia from "@/assets/2024/logo-black.svg"
 import SkillList from "@/app/presentation/SkillList"
 import ConfettiAnimated from "@/components/ui/ConfettiAnimated"
-import { useState, useRef } from "react"
+import { useState } from "react"
 import logoStripe from "@/assets/logos/stripe-logo.svg"
 import logoVonage from "@/assets/logos/vonage.png"
 import logoExpo from "@/assets/logos/expo.svg"
 import logoReactNative from "@/assets/logos/react-native.svg"
-import { motion, useInView } from "framer-motion"
 
 export default function Pia() {
   const piaStack = [
@@ -27,31 +26,9 @@ export default function Pia() {
     { name: "docker" },
   ]
   const [isHovered, setIsHovered] = useState(false)
-  const ref = useRef(null)
-  const isInView = useInView(ref, { amount: 0.5 })
+
   return (
-    <motion.div
-      className="grid max-w-6xl grid-cols-1 items-center overflow-hidden rounded-xl bg-gradient-to-tr from-white/20 to-white/60 shadow-md lg:grid-cols-3"
-      ref={ref}
-      initial="initial"
-      animate={isInView && "animate"}
-      variants={{
-        initial: {
-          scale: 0,
-          opacity: 0,
-        },
-        animate: {
-          scale: 1,
-          opacity: 1,
-        },
-      }}
-      transition={{
-        type: "spring",
-        mass: 1,
-        stiffness: 500,
-        damping: 60,
-      }}
-    >
+    <div className="grid max-w-6xl grid-cols-1 items-center overflow-hidden rounded-xl bg-gradient-to-tr from-white/20 to-white/60 shadow-md lg:grid-cols-3">
       <Link
         target="_blank"
         rel="noopener noreferrer"
@@ -118,6 +95,6 @@ export default function Pia() {
         </div>
         <SkillList skillList={piaStack} theme="light" variant="small" />
       </div>
-    </motion.div>
+    </div>
   )
 }
