@@ -6,7 +6,7 @@ import { Cog } from "lucide-react"
 
 export default function AboutContainer() {
   return (
-    <section className="flex flex-col items-center justify-center p-tight lg:items-end">
+    <section className="flex flex-col items-center justify-center p-2 lg:items-end">
       <div className="relative flex flex-col items-center gap-8 lg:flex-row">
         <FollowerPointerCard
           customCursor={
@@ -65,7 +65,7 @@ export default function AboutContainer() {
             En résumé, je suis quelqu&apos;un de plutôt décontracté, créatif et
             attentif aux émotions. J&apos;aime que mon travail ait du sens. Si
             tu veux en savoir plus sur mon parcours,
-            <b> c&apos;est juste en dessous !</b>
+            <b> c&apos;est juste au dessus !</b>
           </p>
         </div>
       </div>

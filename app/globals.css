@@ -28,18 +28,7 @@
   html > * {
     font-family: var(--font-p);
   }
-  /* html {
-    scroll-snap-type: y proximity;
-  } */
-  section {
-    min-height: 100vh;
-    /* scroll-snap-align: center; */
-  }
 }
-
-/* :root * {
-  @apply outline outline-2 outline-gray-950;
-} */
 
 .bg-clip-text {
   padding-left: 0.1em;

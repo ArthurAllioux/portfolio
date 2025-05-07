@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import SkillList from "@/app/presentation/SkillList"
 import logoWebedia from "@/assets/2022/webedia3-removebg-preview.png"
-import webediaBg from "@/assets/2022/webedia bg.png"
+import webediaBg from "@/assets/2022/webedia-bg.png"
 import ConfettiAnimated from "@/components/ui/ConfettiAnimated"
 import { useState } from "react"
 
