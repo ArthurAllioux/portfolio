@@ -1,6 +1,9 @@
+"use client"
 import Image from "next/image"
 import SkillList from "@/app/presentation/SkillList"
 import logoTakima from "@/assets/2023/logo-takima.png"
+import { useRef } from "react"
+import { motion, useInView } from "framer-motion"
 
 export default function Takima() {
   const takimaStack = [
@@ -16,8 +19,31 @@ export default function Takima() {
     { name: "gitlab" },
     { name: "docker" },
   ]
+  const ref = useRef(null)
+  const isInView = useInView(ref, { amount: 0.5 })
   return (
-    <div className="grid max-w-6xl grid-cols-1 items-center overflow-hidden rounded-xl bg-gradient-to-tr from-white/20 to-white/60 shadow-md lg:grid-cols-3">
+    <motion.div
+      className="grid max-w-6xl grid-cols-1 items-center overflow-hidden rounded-xl bg-gradient-to-tr from-white/20 to-white/60 shadow-md lg:grid-cols-3"
+      ref={ref}
+      initial="initial"
+      animate={isInView && "animate"}
+      variants={{
+        initial: {
+          scale: 0,
+          opacity: 0,
+        },
+        animate: {
+          scale: 1,
+          opacity: 1,
+        },
+      }}
+      transition={{
+        type: "spring",
+        mass: 1,
+        stiffness: 500,
+        damping: 60,
+      }}
+    >
       <div className="col-span-1 flex h-full items-center justify-center bg-purple-200 p-4 shadow-big-inner shadow-purple-400">
         <Image
           src={logoTakima}
@@ -61,6 +87,6 @@ export default function Takima() {
         </div>
         <SkillList skillList={takimaStack} theme="light" variant="small" />
       </div>
-    </div>
+    </motion.div>
   )
 }

@@ -5,7 +5,8 @@ import SkillList from "@/app/presentation/SkillList"
 import logoWebedia from "@/assets/2022/webedia3-removebg-preview.png"
 import webediaBg from "@/assets/2022/webedia-bg.png"
 import ConfettiAnimated from "@/components/ui/ConfettiAnimated"
-import { useState } from "react"
+import { useState, useRef } from "react"
+import { motion, useInView } from "framer-motion"
 
 export default function Webedia() {
   const [isHovered, setIsHovered] = useState(false)
@@ -18,8 +19,31 @@ export default function Webedia() {
     { name: "mongodb" },
     { name: "postgres" },
   ]
+  const ref = useRef(null)
+  const isInView = useInView(ref, { amount: 0.5 })
   return (
-    <div className="grid max-w-6xl grid-cols-1 items-center overflow-hidden rounded-xl bg-gradient-to-tr from-white/20 to-white/60 shadow-md lg:grid-cols-3">
+    <motion.div
+      className="grid max-w-6xl grid-cols-1 items-center overflow-hidden rounded-xl bg-gradient-to-tr from-white/20 to-white/60 shadow-md lg:grid-cols-3"
+      ref={ref}
+      initial="initial"
+      animate={isInView && "animate"}
+      variants={{
+        initial: {
+          scale: 0,
+          opacity: 0,
+        },
+        animate: {
+          scale: 1,
+          opacity: 1,
+        },
+      }}
+      transition={{
+        type: "spring",
+        mass: 1,
+        stiffness: 500,
+        damping: 60,
+      }}
+    >
       <Link
         target="_blank"
         rel="noopener noreferrer"
@@ -98,6 +122,6 @@ export default function Webedia() {
         </div>
         <SkillList skillList={webediaStack} theme="light" variant="small" />
       </div>
-    </div>
+    </motion.div>
   )
 }
